@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           display:flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+          
+        }
+        form{
+            background-color: rgb(43, 52, 125);
+            width: 50%;
+        }
+        
+        input{
+            margin: 6px ;
+            width: 90%;
+            font-size: 20px;
+        }
+        h1{
+            color: rgb(148, 33, 33);
+            
+        }
+        button{
+            width: 50%;
+            font-size: 20px;
+        }
+
+        
+    </style>
+</head>
+<body id="body">
+    <h1>House Price Prediction</h1>
+    <form action = "{{url_for('predict_data')}}" method="post">
+        <input type="text" id="fname" placeholder="Longitude" name="longitude" ><br>
+        <input type="text" id="lname" placeholder="Latitude" name="latitude"><br>
+        <input type="text" id="fname" placeholder="Housing Age" name="housing_median_age"><br>
+        <input type="text" id="lname" placeholder="Rooms" name="total_rooms"><br>
+        <input type="text" id="fname" placeholder="Bedrooms" name="total_bedrooms"><br>
+        <input type="text" id="lname" placeholder="Population" name="population"><br>
+        <input type="text" id="fname" placeholder="Households" name="households"><br>
+        <input type="text" id="lname" placeholder="Income" name="median_income"><br>
+        <button type="submit">Predict</button>
+      </form>
+      <h1> Prediction {{result}}</h1>
+  
+     
+     
+    
+</body>
+</html>
+
